@@ -45,7 +45,7 @@ SECRET_KEY = 'not_a_secret_for_dev#!@12345'
 if os.environ.get('SECRET_KEY') is not None:
     SECRET_KEY = os.environ['SECRET_KEY']
 
-ALLOWED_HOSTS = ['172.17.0.2','localhost', '127.0.0.1', '[::1]']
+ALLOWED_HOSTS = ['172.17.0.2','localhost', '127.0.0.1', '[::1]','0.0.0.0']
 if os.environ.get('ALLOWED_HOSTS') is not None:
     ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(',')
     if 'localhost' not in ALLOWED_HOSTS:
